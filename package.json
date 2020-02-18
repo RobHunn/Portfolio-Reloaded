@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "web developer portfolio",
   "main": "index.html",
-  "dependencies": {},
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

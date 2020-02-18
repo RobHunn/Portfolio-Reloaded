@@ -1,9 +1,3 @@
-/* Global Vars*/
-:root {
-    --h1-font-family: 'Libre Baskerville', serif;
-    --p-font-family: 'IBM Plex Serif', serif;
-  }
-
 /*------------------------------------------------------------------
     IMPORT FONTS
 -------------------------------------------------------------------*/
@@ -12,6 +6,12 @@
 @import url('https://fonts.googleapis.com/css?family=Athiti:400,500,600');
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif:400,500&display=swap');
+
+/* Global Vars*/
+:root {
+    --h1-font-family: 'Libre Baskerville', serif;
+    --p-font-family: 'IBM Plex Serif', serif;
+  }
 
 /*------------------------------------------------------------------
     IMPORT FILES
@@ -184,6 +184,12 @@ button:focus{
 }
 a.nav-link{
     color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 18px;
+    transition: all .5s ease-in;
+    background: transparent !important;
 }
 a.nav-link:hover,a.nav-link:focus{
 	color: red;
@@ -357,7 +363,7 @@ h3.h3-txt{
 #about-me{
     padding: 80px 0;
     z-index:1;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(255,255,255);
     }
     #about-me .my-info{
         margin-top: 5rem;
@@ -459,7 +465,7 @@ h3.h3-txt{
         background-repeat: no-repeat;
         margin: 0 auto;
         z-index:1;
-        box-shadow: 10px -10px 0px #d0a772;
+        box-shadow: 20px -20px 0px rgb(66, 150, 228);
     }
     #about-me .my-info .blue-sqr{
         position: absolute;
@@ -471,6 +477,46 @@ h3.h3-txt{
         left: -240px;
         border-radius: 27%;
     }
+
+
+/************************************************************************/                  
+                    /*
+                    * === Youtube section start ===
+                    */
+/************************************************************************/
+
+.youtube{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    background-color: rgb(255,255,255);
+}
+
+.youtube-item iframe{
+    box-shadow: 10px 5px 5px rgb(107, 107, 107);
+    border: 1px solid black;
+    position: center;
+    width: 350px;
+    height: 350px;
+    padding: 15px;
+    margin-top: 20px;
+}
+.youtube .youtube-h1{
+    font-family: var(--h1-font-family);
+}
+.youtube .youtube-h1 img{
+    width: 190px;
+    margin-top: 25px;
+}
+.youtube .youtube-h1 p{
+    font-family: var( --p-font-family);
+    font-size: 2rem;
+}
 
 /*------------------------------------------------------------------
     QT
@@ -486,8 +532,8 @@ h3.h3-txt{
 	position: relative;
 }
 .qt-background p {
-    font-size: 35px;
-    font-weight: 300;
+    font-size: 1.4rem;
+    font-weight: 600;
     line-height: 44px;
     color: #fff;
 	font-family: 'Arbutus Slab', serif;
@@ -495,13 +541,13 @@ h3.h3-txt{
 }
 
 .qt-background span {
-    color: #fff;
-    font-size: 20px;  
+    color: rgb(253, 2, 2);
+    font-size: 23px;  
 	font-weight: 500;	
 }
 
 /*------------------------------------------------------------------
-    Menu
+    projects
 -------------------------------------------------------------------*/
 
 .menu-box{
@@ -518,7 +564,7 @@ h3.h3-txt{
 }
 .heading-title p{
 	font-size: 18px;
-	font-weight: 200;
+	font-weight: 400;
 	margin: 0px;
 }
 
@@ -543,7 +589,7 @@ h3.h3-txt{
 }
 
 .filter-button-group button.active {
-    background: #cfa671;
+    background: red;
     color: #fff;
     box-shadow: 2px 20px 45px 5px rgba(0,0,0,.2);
 }
@@ -565,7 +611,7 @@ h3.h3-txt{
     bottom: -100%;
     right: 0;
     height: 100%;
-    background: rgba(207, 166, 113, 0.9);
+    background: rgba(197, 197, 197, 0.9);
     padding: 12px 12px;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
@@ -595,101 +641,6 @@ h3.h3-txt{
 	bottom: 0px;
 }
 
-
-/*------------------------------------------------------------------
-    Gallery
--------------------------------------------------------------------*/
-
-.gallery-box{
-	padding: 70px 0px;
-}
-.tz-gallery{
-	margin-top: 30px;
-}
-.tz-gallery .lightbox img {
-    width: 100%;
-    margin-bottom: 30px;
-    transition: 0.2s ease-in-out;
-    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
-}
-.tz-gallery .lightbox img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
-}
-
-/*------------------------------------------------------------------
-    Customer Reviews
--------------------------------------------------------------------*/
-
-.customer-reviews-box{
-	padding: 70px 0px;
-}
-
-.carousel-inner .carousel-item .img-box{
-	width: 135px;
-	height: 135px;
-}
-.carousel-control-prev{
-	left: -100px;
-}
-.carousel-control-next{
-	right: -100px;
-}
-.carousel-indicators{
-	top: 320px;
-}
-
-.text-warning{
-	color: #d0a772 !important;
-	font-size: 24px;
-}
-
-@media (min-width: 320px) and (max-width: 640px) {
-	.carousel-inner .carousel-item p{
-		font-size: 14px;
-	}
-	.carousel-control-prev{
-		left: -5px;
-	}
-	.carousel-control-next{
-		right: -5px;
-	}
- 	.carousel-indicators{
-		top: 400px;
-	}
-}
-
-#reviews .carousel-control-prev{
-	background: #d0a772;
-	color: #ffffff;
-	display: block;
-	position: absolute;
-	width: 8%;
-	height: 50px;
-	top: 50%;
-	font-size: 28px;
-	opacity: 1;
-}
-#reviews .carousel-control-prev:hover{
-	background: #010101;
-	color: #ffffff;
-}
-
-#reviews .carousel-control-next{
-	background: #d0a772;
-	color: #ffffff;
-	display: block;
-	position: absolute;
-	width: 8%;
-	height: 50px;
-	top: 50%;
-	font-size: 28px;
-	opacity: 1;
-}
-#reviews .carousel-control-next:hover{
-	background: #010101;
-	color: #ffffff;
-}
 /************************************************************************/
                     /*
                     * === Footer section ===
@@ -903,15 +854,15 @@ padding-bottom: 0em;
 	margin-top: 20px;
 }
 .btn.btn-common{
-	color: #d0a772;
+	color: green;
 	background-color: transparent;
 	background-image: none;
-	border-color: #cfa671;
+	border: 2px solid green;
 }
 .btn.btn-common:hover{
 	color: #ffffff;
-	background-color: #cfa671;
-	border-color: #cfa671;
+	background-color: green;
+	border-color: none;
 }
 .blog-box{
 	padding: 70px 0px;

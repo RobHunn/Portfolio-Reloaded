@@ -9,9 +9,9 @@
  
      <!-- Site Metas -->
     <title>SoftWare Engineer Rob H.</title>  
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-	<meta name="author" content="">
+    <meta name="keywords" content="javascript react.js node.js html5 css3 mysql">
+    <meta name="description" content="Web developer protfolio">
+	<meta name="author" content="Robert J Hunnicutt">
 	<!-- Font Awesome CDN -->
 	<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
     <!-- Site Icons -->
@@ -23,10 +23,7 @@
     <link rel="stylesheet" href="css/style.css">    
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
-	<!--Owl carousel link-->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-
+	
 </head>
 
 <body>
@@ -61,7 +58,7 @@
 			<div class="slider-content">
 				<div>
 					<h1 class="h1-txt"> Robert Hunnicutt The
-						<span class="txt-type" data-wait="1500" data-words='["Developer.","Enthusiast..."]'></span>
+						<span id="txt-type" class="txt-type" data-wait="1500" data-words='["Developer.","Enthusiast..."]'></span>
 					</h1>
 					<h3 class="h3-txt">Not just another drop in the bucket!</h3>
 				</div>
@@ -115,7 +112,48 @@
         </div>    
     </section>
     <!--About me section end-->
-	<!-- End About -->
+
+	 <!-- Youtube section start-->
+	 <section class="youtube" id="youtube-target">
+        <div class="container text-center youtube-h1">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>Check out my channel</h1>
+					<img src="/images/poop.png" alt="">
+				</div>
+			</div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row">
+				<div class="col-lg-4 col-md-6  youtube-item">
+					<iframe  
+					src="https://www.youtube.com/embed/9HBTmbkFi6A" 
+					frameborder="0" 
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+					allowfullscreen>
+					</iframe>
+				</div>
+				<div class="col-lg-4 col-md-6 youtube-item">
+					<iframe  
+					src="https://www.youtube.com/embed/9HBTmbkFi6A" 
+					frameborder="0" 
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+					allowfullscreen>
+					</iframe>
+				</div>
+				<div class="col-lg-4 col-md-6 youtube-item">
+					<iframe  
+					src="https://www.youtube.com/embed/9HBTmbkFi6A" 
+					frameborder="0" 
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+					allowfullscreen>
+					</iframe>
+				</div>
+            </div>
+        </div>
+    </section>
+    <!--Youtube section end-->
 	
 	<!-- Start QT -->
 	<div class="qt-box qt-background">
@@ -123,23 +161,23 @@
 			<div class="row">
 				<div class="col-md-8 ml-auto mr-auto text-right">
 					<p class="lead ">
-						" If you're not the one coding, stay out of the way and bring lots of coffee! "
+						" When you don't create things, you become defined by your tastes rather than ability. Your tastes only narrow & exclude people. So create. "
 					</p>
-					<span class="lead"><i>Robert Hunnicutt</i></span>
+					<span class="lead"><i>_Why The Lucky Stiff</i></span>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- End QT -->
 	
-	<!-- Start Menu -->
-	<div class="menu-box">
+	<!-- Start Project -->
+	<div class="menu-box" style="margin-bottom: 0; padding-bottom: 0;">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="heading-title text-center">
-						<h2>Special Menu</h2>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+						<h2>Projects</h2>
+						<p>Some of my recent creations</p>
 					</div>
 				</div>
 			</div>
@@ -148,108 +186,108 @@
 					<div class="special-menu text-center">
 						<div class="button-group filter-button-group">
 							<button class="active" data-filter="*">All</button>
-							<button data-filter=".drinks">Drinks</button>
-							<button data-filter=".lunch">Lunch</button>
-							<button data-filter=".dinner">Dinner</button>
+							<button data-filter=".javascript">Javascript</button>
+							<button data-filter=".react">React.js</button>
+							<button data-filter=".html">HTML/CSS/PHP</button>
 						</div>
 					</div>
 				</div>
 			</div>
 				
 			<div class="row special-list">
-				<div class="col-lg-4 col-md-6 special-grid drinks">
+				<div class="col-lg-4 col-md-6 special-grid javascript">
 					<div class="gallery-single fix">
-						<img src="images/img-01.jpg" class="img-fluid" alt="Image">
+						<img src="images/img-01.jpg" class="" alt="Image">
 						<div class="why-text">
-							<h4>Special Drinks 1</h4>
+							<h4>Special javascript 1</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
 							<h5> $7.79</h5>
 						</div>
 					</div>
 				</div>
 				
-				<div class="col-lg-4 col-md-6 special-grid drinks">
+				<div class="col-lg-4 col-md-6 special-grid javascript">
 					<div class="gallery-single fix">
-						<img src="images/img-02.jpg" class="img-fluid" alt="Image">
+						<img src="images/img-02.jpg" class="" alt="Javascript">
 						<div class="why-text">
-							<h4>Special Drinks 2</h4>
+							<h4>Special javascript 2</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
 							<h5> $9.79</h5>
 						</div>
 					</div>
 				</div>
 				
-				<div class="col-lg-4 col-md-6 special-grid drinks">
+				<div class="col-lg-4 col-md-6 special-grid javascript">
 					<div class="gallery-single fix">
-						<img src="images/img-03.jpg" class="img-fluid" alt="Image">
+						<img src="images/img-03.jpg" class="" alt="Javascript"">
 						<div class="why-text">
-							<h4>Special Drinks 3</h4>
+							<h4>Special javascript 3</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
 							<h5> $10.79</h5>
 						</div>
 					</div>
 				</div>
 				
-				<div class="col-lg-4 col-md-6 special-grid lunch">
+				<div class="col-lg-4 col-md-6 special-grid react">
 					<div class="gallery-single fix">
-						<img src="images/img-04.jpg" class="img-fluid" alt="Image">
+						<img src="images/img-04.jpg" class="" alt="React.js">
 						<div class="why-text">
-							<h4>Special Lunch 1</h4>
+							<h4>Special react 1</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
 							<h5> $15.79</h5>
 						</div>
 					</div>
 				</div>
 				
-				<div class="col-lg-4 col-md-6 special-grid lunch">
+				<div class="col-lg-4 col-md-6 special-grid react">
 					<div class="gallery-single fix">
-						<img src="images/img-05.jpg" class="img-fluid" alt="Image">
+						<img src="images/img-05.jpg" class="" alt="React.js">
 						<div class="why-text">
-							<h4>Special Lunch 2</h4>
+							<h4>Special react 2</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
 							<h5> $18.79</h5>
 						</div>
 					</div>
 				</div>
 				
-				<div class="col-lg-4 col-md-6 special-grid lunch">
+				<div class="col-lg-4 col-md-6 special-grid react">
 					<div class="gallery-single fix">
-						<img src="images/img-06.jpg" class="img-fluid" alt="Image">
+						<img src="images/img-06.jpg" class="" alt="React.js">
 						<div class="why-text">
-							<h4>Special Lunch 3</h4>
+							<h4>Special react 3</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
 							<h5> $20.79</h5>
 						</div>
 					</div>
 				</div>
 				
-				<div class="col-lg-4 col-md-6 special-grid dinner">
+				<div class="col-lg-4 col-md-6 special-grid html">
 					<div class="gallery-single fix">
-						<img src="images/img-07.jpg" class="img-fluid" alt="Image">
+						<img src="images/img-07.jpg" class="" alt="HTML">
 						<div class="why-text">
-							<h4>Special Dinner 1</h4>
+							<h4>Special html 1</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
 							<h5> $25.79</h5>
 						</div>
 					</div>
 				</div>
 				
-				<div class="col-lg-4 col-md-6 special-grid dinner">
+				<div class="col-lg-4 col-md-6 special-grid html">
 					<div class="gallery-single fix">
-						<img src="images/img-08.jpg" class="img-fluid" alt="Image">
+						<img src="images/img-08.jpg" class="" alt="HTML">
 						<div class="why-text">
-							<h4>Special Dinner 2</h4>
+							<h4>Special html 2</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
 							<h5> $22.79</h5>
 						</div>
 					</div>
 				</div>
 				
-				<div class="col-lg-4 col-md-6 special-grid dinner">
+				<div class="col-lg-4 col-md-6 special-grid html">
 					<div class="gallery-single fix">
-						<img src="images/img-09.jpg" class="img-fluid" alt="Image">
+						<img src="images/img-09.jpg" class="" alt="HTML">
 						<div class="why-text">
-							<h4>Special Dinner 3</h4>
+							<h4>Special html 3</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
 							<h5> $24.79</h5>
 						</div>
@@ -259,65 +297,179 @@
 			</div>
 		</div>
 	</div>
-	<!-- End Menu -->
-	
+	<!-- End Project -->
 
-	
-	<!-- Start Customer Reviews -->
-	<div class="customer-reviews-box">
+	<!-- Start blog -->
+	<div class="blog-box" style="margin-top: 0; padding-bottom: 0;">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="heading-title text-center">
-						<h2>Customer Reviews</h2>
+						<h2>Blog</h2>
 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-8 mr-auto ml-auto text-center">
-					<div id="reviews" class="carousel slide" data-ride="carousel">
-						<div class="carousel-inner mt-4">
-							<div class="carousel-item text-center active">
-								<div class="img-box p-1 border rounded-circle m-auto">
-									<img class="d-block w-100 rounded-circle" src="images/profile-1.jpg" alt="">
-								</div>
-								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Paul Mitchel</strong></h5>
-								<h6 class="text-dark m-0">Web Developer</h6>
-								<p class="m-0 pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
-							</div>
-							<div class="carousel-item text-center">
-								<div class="img-box p-1 border rounded-circle m-auto">
-									<img class="d-block w-100 rounded-circle" src="images/profile-3.jpg" alt="">
-								</div>
-								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Steve Fonsi</strong></h5>
-								<h6 class="text-dark m-0">Web Designer</h6>
-								<p class="m-0 pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
-							</div>
-							<div class="carousel-item text-center">
-								<div class="img-box p-1 border rounded-circle m-auto">
-									<img class="d-block w-100 rounded-circle" src="images/profile-7.jpg" alt="">
-								</div>
-								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Daniel vebar</strong></h5>
-								<h6 class="text-dark m-0">Seo Analyst</h6>
-								<p class="m-0 pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
-							</div>
+				<div class="col-lg-4 col-md-6 col-12">
+					<div class="blog-box-inner">
+						<div class="blog-img-box">
+							<img class="img-fluid" src="images/blog-img-01.jpg" alt="">
 						</div>
-						<a class="carousel-control-prev" href="#reviews" role="button" data-slide="prev">
-							<i class="fa fa-angle-left" aria-hidden="true"></i>
-							<span class="sr-only">Previous</span>
-						</a>
-						<a class="carousel-control-next" href="#reviews" role="button" data-slide="next">
-							<i class="fa fa-angle-right" aria-hidden="true"></i>
-							<span class="sr-only">Next</span>
-						</a>
-                    </div>
+						<div class="blog-detail">
+							<h4>Duis feugiat neque sed dolor cursus.</h4>
+							<ul>
+								<li><span>Post by Admin</span></li>
+								<li>|</li>
+								<li><span>27 February 2018</span></li>
+							</ul>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor suscipit feugiat. Ut at pellentesque ante, sed convallis arcu. Nullam facilisis, eros in eleifend luctus, odio ante sodales augue, eget lacinia lectus erat et sem. </p>
+							<p>Sed semper orci sit amet porta placerat. Etiam quis finibus eros. </p>
+							<a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Read More</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-12">
+					<div class="blog-box-inner">
+						<div class="blog-img-box">
+							<img class="img-fluid" src="images/blog-img-02.jpg" alt="">
+						</div>
+						<div class="blog-detail">
+							<h4>Duis feugiat neque sed dolor cursus.</h4>
+							<ul>
+								<li><span>Post by Admin</span></li>
+								<li>|</li>
+								<li><span>27 February 2018</span></li>
+							</ul>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor suscipit feugiat. Ut at pellentesque ante, sed convallis arcu. Nullam facilisis, eros in eleifend luctus, odio ante sodales augue, eget lacinia lectus erat et sem. </p>
+							<p>Sed semper orci sit amet porta placerat. Etiam quis finibus eros. </p>
+							<a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Read More</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-12">
+					<div class="blog-box-inner">
+						<div class="blog-img-box">
+							<img class="img-fluid" src="images/blog-img-03.jpg" alt="">
+						</div>
+						<div class="blog-detail">
+							<h4>Duis feugiat neque sed dolor cursus.</h4>
+							<ul>
+								<li><span>Post by Admin</span></li>
+								<li>|</li>
+								<li><span>27 February 2018</span></li>
+							</ul>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor suscipit feugiat. Ut at pellentesque ante, sed convallis arcu. Nullam facilisis, eros in eleifend luctus, odio ante sodales augue, eget lacinia lectus erat et sem. </p>
+							<p>Sed semper orci sit amet porta placerat. Etiam quis finibus eros. </p>
+							<a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Read More</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-12">
+					<div class="blog-box-inner">
+						<div class="blog-img-box">
+							<img class="img-fluid" src="images/blog-img-04.jpg" alt="">
+						</div>
+						<div class="blog-detail">
+							<h4>Duis feugiat neque sed dolor cursus.</h4>
+							<ul>
+								<li><span>Post by Admin</span></li>
+								<li>|</li>
+								<li><span>27 February 2018</span></li>
+							</ul>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor suscipit feugiat. Ut at pellentesque ante, sed convallis arcu. Nullam facilisis, eros in eleifend luctus, odio ante sodales augue, eget lacinia lectus erat et sem. </p>
+							<p>Sed semper orci sit amet porta placerat. Etiam quis finibus eros. </p>
+							<a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Read More</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-12">
+					<div class="blog-box-inner">
+						<div class="blog-img-box">
+							<img class="img-fluid" src="images/blog-img-05.jpg" alt="">
+						</div>
+						<div class="blog-detail">
+							<h4>Duis feugiat neque sed dolor cursus.</h4>
+							<ul>
+								<li><span>Post by Admin</span></li>
+								<li>|</li>
+								<li><span>27 February 2018</span></li>
+							</ul>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor suscipit feugiat. Ut at pellentesque ante, sed convallis arcu. Nullam facilisis, eros in eleifend luctus, odio ante sodales augue, eget lacinia lectus erat et sem. </p>
+							<p>Sed semper orci sit amet porta placerat. Etiam quis finibus eros. </p>
+							<a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Read More</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-12">
+					<div class="blog-box-inner">
+						<div class="blog-img-box">
+							<img class="img-fluid" src="images/blog-img-06.jpg" alt="">
+						</div>
+						<div class="blog-detail">
+							<h4>Duis feugiat neque sed dolor cursus.</h4>
+							<ul>
+								<li><span>Post by Admin</span></li>
+								<li>|</li>
+								<li><span>27 February 2018</span></li>
+							</ul>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor suscipit feugiat. Ut at pellentesque ante, sed convallis arcu. Nullam facilisis, eros in eleifend luctus, odio ante sodales augue, eget lacinia lectus erat et sem. </p>
+							<p>Sed semper orci sit amet porta placerat. Etiam quis finibus eros. </p>
+							<a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Read More</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- End Customer Reviews -->
-				
+	<!-- End blog -->
+
+	<!-- Start Contact -->
+	<div class="contact-box" style="margin-top: 0;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="heading-title text-center">
+						<h2>Contact</h2>
+						<p>Leave Me a message anytime!</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<form id="contactForm">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
+									<div class="help-block with-errors"></div>
+								</div>                                 
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<input type="text" placeholder="Your Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
+									<div class="help-block with-errors"></div>
+								</div> 
+							</div>
+							<div class="col-md-12">
+								<div class="form-group"> 
+									<textarea class="form-control" id="message" placeholder="Your Message" rows="4" data-error="Write your message" required></textarea>
+									<div class="help-block with-errors"></div>
+								</div>
+								<div class="submit-button text-center">
+									<button class="btn btn-common" id="submit" type="submit">Send Message</button>
+									<div id="msgSubmit" class="h3 text-center hidden"></div> 
+									<div class="clearfix"></div> 
+								</div>
+							</div>
+						</div>            
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Contact -->
+
 	<!-- Start Footer -->
 	<footer id="footer-icons" class="page-footer">
 		<!-- Footer Elements -->
@@ -363,7 +515,7 @@
 	<script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>
 	<script src="js/custom.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/myjs.js"></script>
 	<script src="js/smoothScroll.js"></script>
 </body>
 </html>
