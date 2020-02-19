@@ -1,46 +1,37 @@
 <?php
 
+$mysqli = new mysqli("hostserver", "dbusername", "password", "dbname", port);
+if ($mysqli->connect_errno) {
+    echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+}
+
 $errorMSG = "";
 
 // NAME
 if (empty($_POST["name"])) {
-    $errorMSG = "Name is required ";
+  $errorMSG = "Name is required ";
 } else {
-    $name = $_POST["name"];
+  $name = $_POST["name"];
 }
 
 // EMAIL
 if (empty($_POST["email"])) {
-    $errorMSG .= "Email is required ";
+  $errorMSG .= "Email is required ";
 } else {
-    $email = $_POST["email"];
+  $email = $_POST["email"];
 }
 
-// MSG Guest
-if (empty($_POST["guest"])) {
-    $errorMSG .= "Subject is required ";
-} else {
-    $guest = $_POST["guest"];
-}
-
-
-// MSG Event
-if (empty($_POST["event"])) {
-    $errorMSG .= "Subject is required ";
-} else {
-    $event = $_POST["event"];
-}
-
-
-// MESSAGE
+//MESSAGE
 if (empty($_POST["message"])) {
-    $errorMSG .= "Message is required ";
+  $errorMSG .= "Message is required ";
 } else {
-    $message = $_POST["message"];
+  $message = $_POST["message"];
 }
 
+$res = $mysqli->query("INSERT INTO emails(name,email,message) VALUES ('$name','$email','$message');");
 
-$EmailTo = "armanmia7@gmail.com";
+$EmailTo = "tekguymedia@gmail.com";
+
 $Subject = "New Message Received";
 
 // prepare email body text
@@ -50,12 +41,6 @@ $Body .= $name;
 $Body .= "\n";
 $Body .= "Email: ";
 $Body .= $email;
-$Body .= "\n";
-$Body .= "guest: ";
-$Body .= $guest;
-$Body .= "\n";
-$Body .= "event: ";
-$Body .= $event;
 $Body .= "\n";
 $Body .= "Message: ";
 $Body .= $message;

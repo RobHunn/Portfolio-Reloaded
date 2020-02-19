@@ -18,9 +18,6 @@
 -------------------------------------------------------------------*/
 
 @import url(animate.css);
-@import url(font-awesome.min.css);
-@import url(superslides.css);
-@import url(baguetteBox.min.css);
 
 /*------------------------------------------------------------------
     SKELETON
@@ -185,7 +182,7 @@ button:focus{
 a.nav-link{
     color: white;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 1px;
     font-size: 18px;
     transition: all .5s ease-in;
@@ -551,7 +548,7 @@ h3.h3-txt{
 -------------------------------------------------------------------*/
 
 .menu-box{
-	padding: 70px 0px;
+	padding-top: 50px;
 }
 
 .heading-title{
@@ -1133,10 +1130,6 @@ blockquote {
     background: #cfa671;
 }
 
-
-.contact-box{
-	padding: 70px 0px;
-}
 
 .map-full {
     width: 100%;
