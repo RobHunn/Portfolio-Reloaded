@@ -6,10 +6,10 @@
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
      <!-- Site Metas -->
-    <title>SoftWare Engineer Rob H.</title>  
-    <meta name="keywords" content="javascript react.js node.js html5 css3 mysql">
-    <meta name="description" content="Web developer portfolio">
-	<meta name="author" content="Robert J Hunnicutt">
+    <title>Software Engineer Rob H.</title>  
+    <meta name="keywords" content="javascript react.js node.js html5 css3 mysql PWA Responsive Mobile">
+    <meta name="description" content="Robert Hunnicutt web developer portfolio">
+	<meta name="author" content="Robert J Hunnicutt III">
 	<!-- Font Awesome CDN -->
 	<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
     <!-- Site Icons -->
@@ -21,16 +21,17 @@
     <link rel="stylesheet" href="css/style.css">    
     <!-- Responsive CSS -->
 	<link rel="stylesheet" href="css/responsive.css">
+	<script src="js/loader.js"></script>
 	
 </head>
 
-<body>
+<body onload="myFunction()" >
 	<!-- Start header -->
 	<nav id="home-target" class="top-navbar">
 		<nav class="navbar navbar-expand-lg ">
 			<div class="container">
 				<a class="navbar-brand nav-link" href="#home-target">
-					<img id="navbar-brand-mp3" width="45px" height="45px" src="images/cobra-red.jpg" alt="" />
+					<img id="navbar-brand-mp3" width="45px" height="45px" src="images/cobra-red.jpg" alt="logo of a snake" />
 					<p class="navbar-branding navbar-brand">Cobra Kai Coding</p>
 				</a>
 				<button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,10 +50,11 @@
 		</nav>
 	</nav>
 	<!-- End header -->
-	
+
 	<!--Slider section start-->
 	<section class="slider text-center" id="home-target">
-		<div class="slider-opacity">
+		<div id="loader"></div>
+		<div style="display:none;" id="myDiv"  class="slider-opacity animate-bottom">
 			<div class="slider-content">
 				<div>
 					<h1 class="h1-txt"> Robert Hunnicutt The
@@ -69,9 +71,9 @@
 					<br><br>
 					<div class="social-media">
 						<a target="_blank" href="https://github.com/RobHunn" class="fab fa-github"></a>
-						<a class="fab fa-linkedin-in"></a>
+						<a target="_blank" href="https://www.linkedin.com/in/rob-hunn-ckc/" class="fab fa-linkedin-in"></a>
 						<a class="fab fa-youtube"></a>
-						<a class="fab fa-medium"></a>
+						<a target="_blank" href="https://medium.com/@CobraKaiCoding" class="fab fa-medium"></a>
 					</div>
 				</div>
 			</div>
@@ -88,7 +90,7 @@
                 <div class="my-info col-lg-6 col-md-6 col-sm-12">
                     <div class="blue-sqr"></div>
                     <h1>Robert J. Hunnicutt III</h1>
-                    <P>Full stack javascript engineer</P>
+                    <P>Full Stack JavaScript Engineer</P>
 					<p class="p2">"<span>R</span>aspberry pi 3<span>B</span>+ maker, avid fisherman and scuba diver. <span>S</span>oftwear enthusiast / web developer from Miami FL. <span>I</span> also enjoy teaching and sharing coding knowledge whenever posable"</p>
 					<div class="row">
 						<p class="p3"><span>F</span>avorite Tech:</p>
@@ -101,7 +103,6 @@
 							<i class="fas fa-database"></i>
 						</div>
 					</div>
-                    <!--<a href="#">Resume</a>-->
                 </div>
                 <div class="img-trey col-lg-6 col-md-6 col-sm-12">
                     <div class="background-img img-fluid"></div>
@@ -117,7 +118,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h1>Check out my channel</h1>
-					<img src="/images/poop.png" alt="">
+					<img src="/images/poop.png" alt="youtube logo">
 				</div>
 			</div>
         </div>
@@ -184,9 +185,9 @@
 					<div class="special-menu text-center">
 						<div class="button-group filter-button-group">
 							<button class="active" data-filter="*">All</button>
-							<button data-filter=".javascript">Javascript</button>
 							<button data-filter=".react">React.js</button>
-							<button data-filter=".html">HTML/CSS/PHP</button>
+							<button data-filter=".javascript">JavaScript</button>
+							<button data-filter=".html">PHP HTML</button>
 						</div>
 					</div>
 				</div>
@@ -195,99 +196,101 @@
 			<div class="row special-list">
 				<div class="col-lg-4 col-md-6 special-grid javascript">
 					<div class="gallery-single fix">
-						<img height="400px" src="images/img-01.jpg" class="" alt="Image">
+						<img height="400px" src="images/portfolio-reloaded.png" class="" alt="landing page of a javascript web application">
 						<div class="why-text">
-							<h4>Special javascript 1</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $7.79</h5>
+							<h4>Progressive Web App</h4>
+							<p>Front end: HTML5 CSS3 Bootstrap jquery Javascript</p>
+							<p>100% responsive on desktop mobile and tablet</p>
+							<p>Back end: Express Node.js MySql - Also consuming API for dynamic data</p>
+							<a target="_blank" href="https://github.com/RobHunn" class="fab fa-github">  Link to Code Base</a>
 						</div>
 					</div>
 				</div>
 				
 				<div class="col-lg-4 col-md-6 special-grid javascript">
 					<div class="gallery-single fix">
-						<img height="400px" src="images/img-02.jpg" class="" alt="Javascript">
+						<img height="400px" src="images/male-placeholder.jpg" class="" alt="landing page of a node.js web app">
 						<div class="why-text">
 							<h4>Special javascript 2</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $9.79</h5>
+							<a target="_blank" href="https://github.com/RobHunn" class="fab fa-github">  Link to Code Base</a>
 						</div>
 					</div>
 				</div>
 				
 				<div class="col-lg-4 col-md-6 special-grid javascript">
 					<div class="gallery-single fix">
-						<img height="400px" src="images/img-03.jpg" class="" alt="Javascript"">
+						<img height="400px" src="images/male-placeholder.jpg" class="" alt="Landing page of a responsive javascript website">
 						<div class="why-text">
 							<h4>Special javascript 3</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $10.79</h5>
+							<a target="_blank" href="https://github.com/RobHunn" class="fab fa-github">  Link to Code Base</a>
 						</div>
 					</div>
 				</div>
 				
 				<div class="col-lg-4 col-md-6 special-grid react">
 					<div class="gallery-single fix">
-						<img height="400px" src="images/img-04.jpg" class="" alt="React.js">
+						<img height="400px" src="images/male-placeholder.jpg" class="" alt="Screen shot of a react.js website">
 						<div class="why-text">
 							<h4>Special react 1</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $15.79</h5>
+							<a target="_blank" href="https://github.com/RobHunn" class="fab fa-github">  Link to Code Base</a>
 						</div>
 					</div>
 				</div>
 				
 				<div class="col-lg-4 col-md-6 special-grid react">
 					<div class="gallery-single fix">
-						<img height="400px" src="images/img-05.jpg" class="" alt="React.js">
+						<img height="400px" src="images/male-placeholder.jpg" class="" alt="screen shot of a React.js and node.js PWA">
 						<div class="why-text">
 							<h4>Special react 2</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $18.79</h5>
+							<a target="_blank" href="https://github.com/RobHunn" class="fab fa-github">  Link to Code Base</a>
 						</div>
 					</div>
 				</div>
 				
 				<div class="col-lg-4 col-md-6 special-grid react">
 					<div class="gallery-single fix">
-						<img height="400px" src="images/img-06.jpg" class="" alt="React.js">
+						<img height="400px" src="images/male-placeholder.jpg" class="" alt="Screen shot of full stack React.js web app with node backend">
 						<div class="why-text">
 							<h4>Special react 3</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $20.79</h5>
+							<a target="_blank" href="https://github.com/RobHunn" class="fab fa-github">  Link to Code Base</a>
 						</div>
 					</div>
 				</div>
 				
 				<div class="col-lg-4 col-md-6 special-grid html">
 					<div class="gallery-single fix">
-						<img height="400px" src="images/img-07.jpg" class="" alt="HTML">
+						<img height="400px" src="images/male-placeholder.jpg" class="" alt="Beautiful HTML css and php website">
 						<div class="why-text">
 							<h4>Special html 1</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $25.79</h5>
+							<a target="_blank" href="https://github.com/RobHunn" class="fab fa-github">  Link to Code Base</a>
 						</div>
 					</div>
 				</div>
 				
 				<div class="col-lg-4 col-md-6 special-grid html">
 					<div class="gallery-single fix">
-						<img height="400px" src="images/img-08.jpg" class="" alt="HTML">
+						<img height="400px" src="images/male-placeholder.jpg" class="" alt="HTML">
 						<div class="why-text">
 							<h4>Special html 2</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $22.79</h5>
+							<a target="_blank" href="https://github.com/RobHunn" class="fab fa-github">  Link to Code Base</a>
 						</div>
 					</div>
 				</div>
 				
 				<div class="col-lg-4 col-md-6 special-grid html">
 					<div class="gallery-single fix">
-						<img height="400px" src="images/img-09.jpg" class="" alt="HTML">
+						<img height="400px" src="images/male-placeholder.jpg" class="" alt="HTML">
 						<div class="why-text">
 							<h4>Special html 3</h4>
 							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $24.79</h5>
+							<a target="_blank" href="https://github.com/RobHunn" class="fab fa-github">  Link to Code Base</a>
 						</div>
 					</div>
 				</div>
@@ -424,13 +427,13 @@
 					<a target="_blank" href="https://github.com/RobHunn" class="fab fa-github"></a>
 				</li>
 				<li class="list-inline-item">
-					<a href="#" class="fab fa-linkedin-in"></a>
+					<a target="_blank" href="https://www.linkedin.com/in/rob-hunn-ckc/" class="fab fa-linkedin-in"></a>
 				</li>
 				<li class="list-inline-item">
 					<a href="#" class="fab fa-youtube"></a>
 				</li>
 				<li class="list-inline-item">
-					<a href="#" class="fab fa-medium"></a>
+					<a target="_blank" href="https://medium.com/@CobraKaiCoding" class="fab fa-medium"></a>
 				</li>
 			</ul>
 		  	<!-- Social buttons -->
@@ -443,7 +446,6 @@
 		<!-- Copyright -->
 	</footer>
 	<!-- End Footer -->
-
 	<!-- ALL JS FILES -->
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/popper.min.js"></script>
