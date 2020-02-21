@@ -647,19 +647,19 @@ h3.h3-txt{
     bottom: -100%;
     right: 0;
     height: 100%;
-    background: rgba(197, 197, 197, 0.9);
+    background: rgba(206, 205, 205, 0.883);
     padding: 12px 12px;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
 .why-text h4{
-	color: #ffffff;
+	color: #505050;
 	font-size: 24px;
 	font-weight: 500;
 	font-family: 'Arbutus Slab', serif;
 }
 .why-text p{
-	color: #ffffff;
+	color: #2f2e2e;
 	font-size: 18px;
 	border-bottom: 1px dashed #010101;
 	margin: 0px;
@@ -670,7 +670,7 @@ h3.h3-txt{
 .why-text h5{
 	font-size: 28px;
 	font-weight: 600;
-	color: #ffffff;
+	color: #505050;
 }
 
 .gallery-single:hover .why-text{

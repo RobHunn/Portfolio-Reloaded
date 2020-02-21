@@ -92,8 +92,9 @@ const esterEgg = ( ()=>{
     }
 });
 
+// My terrible fetch request....
 
-funtion sendFrom1(e){
+function sendFrom1(e){
   e.preventDefault();
   fetch('http://localhost:3001/submit-form', {
         method: 'PUT',

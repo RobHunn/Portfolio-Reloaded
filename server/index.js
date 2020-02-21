@@ -6,7 +6,6 @@ const dotenv = require('dotenv');
 var mysql = require('mysql');
 var bodyParser = require('body-parser');
 
-
 const app = express();
 const result = dotenv.config();
 
@@ -27,8 +26,6 @@ var jsonParser = bodyParser.json()
 // create application/x-www-form-urlencoded parser
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-
-
 var connection = mysql.createConnection({
   host: 'localhost',
   user: 'xxxxx',
@@ -44,19 +41,13 @@ console.log( rows[1])
 //}
   
 })
-
-
-
 app.get('/', (req, res) => res.send('Hello World!'))
-
 
 app.post('/user', function(req, res) {
     console.log('receiving data ...');
     console.log('body is ',req.body);
     res.send(req.body);
 });
-
-
 
 app.post('/submit-form',urlencodedParser, (req, res) => {
   const username = req.body.name
