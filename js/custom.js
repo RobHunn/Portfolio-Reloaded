@@ -64,14 +64,6 @@
     } // End if
   });
 	
-	/* ..............................................
-    BaguetteBox
-    ................................................. */
-	
-	baguetteBox.run('.tz-gallery', {
-		animation: 'fadeIn',
-		noScrollbars: true
-	});
 
 	
 }(jQuery));
