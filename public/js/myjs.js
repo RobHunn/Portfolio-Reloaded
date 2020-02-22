@@ -91,21 +91,3 @@ const esterEgg = ( ()=>{
       esterEgg.audioObjAll[esterEgg.count].play();
     }
 });
-
-// My terrible fetch request....
-
-function sendFrom1(e){
-  let exercises=
-  e.preventDefault();
-  fetch('http://localhost:3001/submit-form', {
-        method: 'PUT',
-        body: JSON.stringify(this.exercises),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    }).then(res => res.json())
-    .catch(err => console.error('Error: ' + err))
-    .then(res => console.log('Success: ' + res));
-}
-
-

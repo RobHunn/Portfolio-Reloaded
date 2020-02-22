@@ -30,18 +30,9 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 var connection = mysql.createConnection({
   host: 'localhost',
   user: 'xxxxx',
-  password: 'xxxxx',
+  password: 'xxxxxxx',
   database: 'email'
 })
-
-
-//connection.query(conn.getEmails, function (err, rows, fields) {
-  //if (err) throw err
-//for(i=0;i<rows.length;i++){
-//console.log( rows[1])
-//}
-  
-//})
 
 app.post('/user', (req, res) => {
     console.log('receiving data ...');
@@ -49,19 +40,18 @@ app.post('/user', (req, res) => {
     res.send(req.body);
 });
 
-app.post('/submit-form',urlencodedParser, (req, res) => {
-  const {name,email,message} = req.body
-connection.connect()
-  connection.query(conn.postMessage,[name,email,message], function (err, rows, fields) {
-  if (err) throw err
-//for(i=0;i<rows.length;i++){
-console.log( rows[1])
-//}
-  
+app.post('/submit-form',jsonParser, (req, res) => {
+  const {name,email,message} = req.body;
+  var  myQ = connection.query(conn.postMessage,[name,email,message], function (err, rows, fields) {
+  if (err) throw err;
 })
-
-  res.status(200).send({name:name,email:email,message:message});
-  connection.end()
+      if(myQ){
+      res.status(200).send({'success':{good:'success'}})
+      }else{
+        res.status(500).send('verybad')
+      }
+    
+   
 })
 
 
