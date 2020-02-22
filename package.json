@@ -2,7 +2,7 @@
   "name": "portfolio-robert-h",
   "version": "1.0.0",
   "description": "web developer portfolio",
-  "main": "index.html",
+  "main": "public/index.html",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.1",
     "body-parser": "^1.19.0",

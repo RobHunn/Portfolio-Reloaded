@@ -19,6 +19,7 @@ app.use(cors());
 app.use(helmet());
 app.use(morgan('common'));
 
+app.use(express.static('public'));
 
 // create application/json parser
 var jsonParser = bodyParser.json()
@@ -29,36 +30,40 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 var connection = mysql.createConnection({
   host: 'localhost',
   user: 'xxxxx',
-  password: 'xxxxxx',
+  password: 'xxxxx',
   database: 'email'
 })
-connection.connect()
 
-connection.query(conn.getEmails, function (err, rows, fields) {
-  if (err) throw err
+
+//connection.query(conn.getEmails, function (err, rows, fields) {
+  //if (err) throw err
 //for(i=0;i<rows.length;i++){
-console.log( rows[1])
+//console.log( rows[1])
 //}
   
-})
-app.get('/', (req, res) => res.send('Hello World!'))
+//})
 
-app.post('/user', function(req, res) {
+app.post('/user', (req, res) => {
     console.log('receiving data ...');
     console.log('body is ',req.body);
     res.send(req.body);
 });
 
 app.post('/submit-form',urlencodedParser, (req, res) => {
-  const username = req.body.name
-  console.log(username);
+  const {name,email,message} = req.body
+connection.connect()
+  connection.query(conn.postMessage,[name,email,message], function (err, rows, fields) {
+  if (err) throw err
+//for(i=0;i<rows.length;i++){
+console.log( rows[1])
+//}
   
-  res.end(username)
 })
 
+  res.status(200).send({name:name,email:email,message:message});
+  connection.end()
+})
 
-// db die()
-connection.end()
 
 // error routes
 app.use(middleware.notFound);
