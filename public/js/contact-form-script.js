@@ -29,10 +29,9 @@ $("#contactForm").validator().on("submit", function (event) {
                             formError()
                         }
                     })
-                    .catch((err)=>{
+                })().catch((err)=>{
                         {errMessageFromCatchBlockLine31:err}
                     })
-                })();
             }
         });
 
