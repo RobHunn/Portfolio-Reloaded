@@ -793,26 +793,29 @@ padding-bottom: 0em;
 	border-color: none;
 }
 .blog-box{
-	padding: 70px 0px;
+    padding: 70px 0px;
+
 }
 .blog-box-inner{
 	position: relative;
-	margin-bottom: 30px;
+    margin-bottom: 30px;
+    
 }
 
 .blog-box-inner .blog-img-box{
 	position: relative;
-	display: block;
+    display: block;
+    
 }
 
 .blog-box-inner .blog-detail{
 	position: absolute;
 	top: 0;
-	background: #fff;
+	background: rgb(255, 255, 255);
 	padding: 30px 25px;
 	border: 1px solid #ddd;
 	transition-duration: .5s;
-	height: 100%;
+	
 }
 
 .blog-detail h4 {

@@ -97,6 +97,7 @@ const funfunfunction = ( () => {
    .then((data) => {
       const res = data.items
       const posts = res.filter(item => item.categories.length > 0);
+
       function toText(node) {
          let tag = document.createElement('div')
          tag.innerHTML = node
@@ -111,22 +112,23 @@ const funfunfunction = ( () => {
        let output = '';
       posts.forEach((item) => {
          output += `
-         <li class="blog__post">
-            <a href="${item.link}">
-               <img src="${item.thumbnail}" class="blog__topImg"></img>
-               <div class="blog__content">
-                  <div class="blog_preview">
-                     <h2 class="blog__title">${shortenText(item.title, 0, 30)+ '...'}</h2>
-                     <p class="blog__intro">${'...' + shortenText(toText(item.content),60, 300)+ '...'}</p>
-                  </div>
-                  <hr>
-                  <div class="blog__info">
-                     <span class="blog__author">${item.author}</span>
-                     <span class="blog__date">${shortenText(item.pubDate,0 ,10)}</span>
-                  </div>
-               </div>
-            <a/>
-         </li>`
+          <div class="col-lg-4 col-md-6 col-12">
+              <div class="blog-box-inner">
+                <div class="blog-img-box">
+                  <img class="img-fluid" src="${item.thumbnail}" alt=" blog post ">
+                </div>
+                <div class="blog-detail">
+                  <h4>${shortenText(item.title, 0, 30)+ '...'}</h4>
+                  <ul>
+                    <li><span>Post by ${item.author}</span></li>
+                    <li>|</li>
+                    <li><span>${shortenText(item.pubDate,0 ,10)}</span></li>
+                  </ul>
+                  <p>${shortenText(item.content,0, 350)+ '...'}</p>
+                  <a class="btn btn-lg btn-circle btn-outline-new-white" href="${item.link}">Read More</a>
+                </Read>
+              </div>
+          </div>`;
       })
       document.querySelector('.blog__slider').innerHTML = output
     })
