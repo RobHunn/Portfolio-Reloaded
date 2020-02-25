@@ -4,36 +4,45 @@ $("#contactForm").validator().on("submit", function (event) {
         formError();
         submitMSG(false, "Did you fill in the form properly?");
     } else {
-        event.preventDefault();
-        (async () => {
+            event.preventDefault();
             var name = document.querySelector('#name').value
             var email = document.querySelector('#email').value
             var message = document.querySelector('#message').value
             name = name.trim()
             email = email.trim()
             message = message.trim()
-            const rawResponse = await fetch('/submit-form', {
+
+             fetch('/submit-form', {
                 method: 'POST',
                 headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({name: name, email: email, message:message})
-                });
-                const content = await rawResponse.json()
-                    .then((content)=>{
-                        console.log(' content is  ',content);
-                        if(content.success.good === 'success')
-                        formSuccess(content);
-                        else{
-                            formError()
-                        }
-                    })
-                })().catch((err)=>{
-                        {errMessageFromCatchBlockLine31:err}
-                    })
-            }
-        });
+            })
+            .then( res => res.json() )
+                .then((res)=>{
+                    console.log(res);
+                    console.log(res.status);
+                    if(res.status.message === 'fail'){
+                        formError()
+                        submitMSG(false, " Email not sent, but message was saved to database. Try again later");
+                    } else if (res.status.message === 'success'){
+                        formSuccess()
+                        return
+                    } else {
+                        formError()
+                        submitMSG(false, " WTF Error :: something went wrong. Try again...");
+                        return
+                    }
+                }) 
+                .catch((err)=>{
+                    formError()
+                    submitMSG(false, " Message not sent, not your fault... please try again later");
+                    console.error('wtf...', err);
+                })                     
+    }
+});
 
 function formSuccess(){
     var name = document.querySelector('#name').value

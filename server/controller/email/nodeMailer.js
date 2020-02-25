@@ -1,4 +1,5 @@
 const nodemailer = require("nodemailer");
+
 async function main(name, email, message) {
 
          var output = 
@@ -14,22 +15,22 @@ async function main(name, email, message) {
         let transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
         port: 587,
-        secure: false, // true for 465, false for other ports
+        secure: false, 
         auth: {
-          user: 'xxxxxx', // generated ethereal user
-          pass: 'xxxxxx' // generated ethereal password
+          user: 'robertnodejs@gmail.com', 
+          pass: '$Treyemail74!'
         },
         tls:{
           rejectUnauthorized:false
         }
       })
-      // send mail with defined transport object
+     
       let info = await transporter.sendMail({
-        from: '"NodeMailer contact" <xxxxxx>', // sender address
-        to: "xxxxxx", // list of receivers
-        subject: "New mail from portfolio app", // Subject line
-        text: "Hello world?", // plain text body
-        html: output // html body
+        from: '"NodeMailer contact" <robertnodejs@gmail.com>', 
+        to: "robertnodejs@gmail.com", 
+        subject: "New mail from portfolio app", 
+        text: "Hello world?", 
+        html: output 
       });
       console.log("Message sent: %s", info.messageId);
     }

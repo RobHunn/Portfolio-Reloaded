@@ -132,5 +132,11 @@ const funfunfunction = ( () => {
       })
       document.querySelector('.blog__slider').innerHTML = output
     })
-    .catch( err => console.log(err) )
+      .catch(err => {
+          if (err.name === 'AbortError') {
+            console.error('Fetch aborted')
+          } else {
+            console.error('Another error', err)
+          }
+      })
 })();

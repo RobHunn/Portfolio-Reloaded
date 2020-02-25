@@ -32,25 +32,28 @@ const db = mysql.createConnection({
   database: 'email'
 })
 
-try {
-  db.connect()
-  console.log('db established connection...');
-} catch (error) {
-  console.log('db connection error :', error);
-}
+db.connect( (err) => {
+  if (err) {
+    console.error('error connecting: ' + err.stack);
+    return;
+  }
+  console.log('connected as id ' + db.threadId);
+});
 
 app.post('/submit-form', (req, res) => {
   const {name,email,message} = req.body;
-  var  myQ = db.query(dbQuery.postMessage,[name,email,message], (err, rows, fields) => {
-        if (err) throw err;
-  })  
-        try {
+  db.query(dbQuery.postMessage,[name,email,message], (err, rows, fields) => {
+        if (err) {
+          throw err;
+        }
+           try {
           nodeMail.main(name,email,message)
-          res.status(200).send({'success':{'good':'success'}})
+          res.status(200).send({'status':{'message':'success'}})
         } catch (error) {
-          console.log('ERROR',error)
-          res.status(500).send({'fail':{'bad':'no good'}})
-        }      
+          console.log('nodeMailer error ',error)
+          res.status(500).send({'status':{'message':'fail'}})
+        }
+  })       
 })
 
 // error routes
