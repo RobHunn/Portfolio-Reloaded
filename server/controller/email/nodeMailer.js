@@ -17,8 +17,8 @@ async function main(name, email, message) {
         port: 587,
         secure: false, 
         auth: {
-          user: 'robertnodejs@gmail.com', 
-          pass: '$Treyemail74!'
+          user: 'xxxxxx', 
+          pass: 'xxxxxx'
         },
         tls:{
           rejectUnauthorized:false
@@ -26,8 +26,8 @@ async function main(name, email, message) {
       })
      
       let info = await transporter.sendMail({
-        from: '"NodeMailer contact" <robertnodejs@gmail.com>', 
-        to: "robertnodejs@gmail.com", 
+        from: '"NodeMailer contact" <xxxxx>', 
+        to: "xxxxxx", 
         subject: "New mail from portfolio app", 
         text: "Hello world?", 
         html: output 
