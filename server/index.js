@@ -62,5 +62,5 @@ app.use(middleware.notFound);
 app.use(middleware.errorHandle);
 
 app.listen(port, () => {
-    console.log(`Listening on https://jsKings:${port}`); 
+    console.log(`Listening on http://localhost:${port}`); 
 });
