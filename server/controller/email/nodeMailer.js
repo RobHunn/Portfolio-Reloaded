@@ -14,8 +14,8 @@ async function main(name, email, message) {
 
         let transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
-        port: 587,
-        secure: false, 
+        port: 465,
+        secure: true, 
         auth: {
           user: 'xxxxxx', 
           pass: 'xxxxxx'

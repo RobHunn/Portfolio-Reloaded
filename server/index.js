@@ -10,7 +10,7 @@ const nodemailer = require("nodemailer");
 
 const app = express();
 const result = dotenv.config();
-const port = process.env.PORT ||  1337;
+const port = process.env.PORT ||  8080;
 
 app.use(cors());
 app.use(helmet());
@@ -27,9 +27,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const db = mysql.createConnection({
   host: 'localhost',
-  user: 'xxxxx',
-  password: 'xxxxxx',
-  database: 'email'
+  user: 'xxxx',
+  password: 'xxxx',
+  database: 'xxxx'
 })
 
 db.connect( (err) => {
@@ -44,16 +44,17 @@ app.post('/submit-form', (req, res) => {
   const {name,email,message} = req.body;
   db.query(dbQuery.postMessage,[name,email,message], (err, rows, fields) => {
         if (err) {
+          console.log('query error: ', err)
           throw err;
-        }
-           try {
-          nodeMail.main(name,email,message)
-          res.status(200).send({'status':{'message':'success'}})
-        } catch (error) {
-          console.log('nodeMailer error ',error)
-          res.status(500).send({'status':{'message':'fail'}})
-        }
-  })       
+        } 
+  })
+   nodeMail.main(name,email,message)
+   .then((res)=>{funSend()})
+        .catch((err)=>{
+              console.log('nodeMailer error ',err)
+              res.status(500).send({"status":{"message":"fail"}})
+          })
+   funSend = ()=>{res.status(200).send({"status":{"message":"success"}})}
 })
 
 // error routes
@@ -61,5 +62,5 @@ app.use(middleware.notFound);
 app.use(middleware.errorHandle);
 
 app.listen(port, () => {
-    console.log(`Listening on http://localhost:${port}`); 
+    console.log(`Listening on https://jsKings:${port}`); 
 });
