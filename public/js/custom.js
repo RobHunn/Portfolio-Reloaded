@@ -24,7 +24,7 @@
           var top = $(window).scrollTop();
           var width = $( window ).width();
   
-           if(top >= 280 || width < 820){
+           if(top >= 280 || width < 800){
                $("nav").addClass("secondary");
            }
            else

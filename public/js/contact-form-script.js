@@ -1,6 +1,5 @@
 $("#contactForm").validator().on("submit", function (event) {
     if (event.isDefaultPrevented()) {
-        // handle the invalid form...
         formError();
         submitMSG(false, "Did you fill in the form properly?");
     } else {
@@ -21,9 +20,7 @@ $("#contactForm").validator().on("submit", function (event) {
                 body: JSON.stringify({name: name, email: email, message:message})
             })
             .then( res => res.json() )
-                .then((res)=>{
-                    console.log(res);
-                    console.log(res.status);
+                .then( res => {
                     if(res.status.message === 'fail'){
                         formError()
                         submitMSG(false, " Email not sent, but message was saved to database. Try again later");
@@ -36,7 +33,7 @@ $("#contactForm").validator().on("submit", function (event) {
                         return
                     }
                 }) 
-                .catch((err)=>{
+                .catch( err => {
                     formError()
                     submitMSG(false, " Message not sent, not your fault... please try again later");
                     console.error('wtf...', err);
@@ -47,7 +44,7 @@ $("#contactForm").validator().on("submit", function (event) {
 function formSuccess(){
     var name = document.querySelector('#name').value
     $("#contactForm")[0].reset();
-    submitMSG(true, name + " Your message was submitted, Thank You!")
+    submitMSG(true, ` ${name}, Your message was submitted. Thank You! ` )
 }
 
 function formError(){

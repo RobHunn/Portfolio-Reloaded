@@ -27,9 +27,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const db = mysql.createConnection({
   host: 'localhost',
-  user: 'xxxx',
-  password: 'xxxx',
-  database: 'xxxx'
+  user: 'root',
+  password: '$Treymysql74!',
+  database: 'email'
 })
 
 db.connect( (err) => {

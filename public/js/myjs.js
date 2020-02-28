@@ -91,6 +91,8 @@ const esterEgg = ( ()=>{
       esterEgg.audioObjAll[esterEgg.count].play();
     }
 });
+
+//Blog posts
 const funfunfunction = ( () => {
     fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@cobrakaicoding')
    .then((res) => res.json())
