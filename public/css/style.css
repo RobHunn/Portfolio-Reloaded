@@ -14,6 +14,7 @@
  
   }
 
+
  
 
 /*------------------------------------------------------------------
@@ -436,8 +437,7 @@ h3.h3-txt{
 }
 
     #about-me .img-trey .background-img{
-        background-image: url('../images/sexy-man.jpeg');
-        background-image: image("../images/sexy-man.webp" format('webp'), "../images/sexy-man.jpg");
+        background-image: url('../images/tiny-trey-avatar.png');
         width: 440px;
         height: 540px;
         background-size: cover;
@@ -445,7 +445,7 @@ h3.h3-txt{
         background-repeat: no-repeat;
         margin: 0 auto;
         z-index:1;
-        box-shadow: 20px -20px 0px rgb(66, 150, 228);
+        box-shadow: 24px -24px 0px rgb(66, 150, 228);
 
     }
     #about-me .my-info .blue-sqr{
@@ -466,7 +466,6 @@ h3.h3-txt{
     background-color: transparent;
     width: 440px;
     height: 540px;
-    border: 1px solid #f1f1f1;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
 
   }
@@ -502,6 +501,9 @@ h3.h3-txt{
     background-color: dodgerblue;
     color: white;
     transform: rotateY(180deg);    
+  }
+  .top-c{
+    margin-top: 5px;
   }
   .flip-card-back h1 {
     font-family: var(--h1-font-family);
