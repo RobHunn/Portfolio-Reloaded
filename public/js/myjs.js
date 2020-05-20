@@ -49,7 +49,16 @@ class TypeWriter {
 }
 
 // Init On DOM Load
-window.addEventListener('load', init);
+// window.addEventListener('load', init);
+document.getElementById('myVideo').addEventListener('ended', function(e) {
+  let x = document.getElementById('none-id');
+  x.style = "display:block";
+  init();
+  document.getElementById('myVideo').style = "display:none"
+
+  
+
+})
 
 // Init App
 function init() {
@@ -61,17 +70,6 @@ function init() {
 }
 // ****** Typed Text animation end ******
 
-
-// ****** Easter Egg ******
-const myAudioElement = document.getElementById("navbar-brand-mp3");
-const audioObj1 = new Audio('images/No-Sensei.mp3');
-
-  myAudioElement.addEventListener("click", event => {
-    console.log('click');
-    if(audioObj1){
-        audioObj1.play();  
-    }
-  });
 
 const funfunfunction =  () => {
   fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@jsKings')

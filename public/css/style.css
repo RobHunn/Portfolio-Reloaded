@@ -219,24 +219,32 @@ nav div.container a.navbar-brand p.navbar-branding{
 * --Container / background img--
 */
 
-.slider{
+/* .slider{
     width: 100%;
     height: 100vh;
-    background-image: url(../images/main-slider.jpg);
+    background-image: url(../images/A7.mp4);
     background-image: image("../images/main-slider.webp" format('webp'), "../images/main-slider.jpg");
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
+} */
+.logovideo{
+    width: 100vw;
+    height: 100vh;
+   
+}
+.none{
+    display: none;
 }
 /* 
 * --Adjust here for opacity div--
 */
-.slider-opacity{
+/* .slider-opacity{
     height: 100%;
     width: 100%;
     background:rgba(0, 0, 0, .35);
     position: relative;
-}
+} */
 /* 
 * --Positioning of main box--
 */
